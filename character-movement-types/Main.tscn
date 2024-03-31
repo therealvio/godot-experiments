@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://8qi67001pi6n"]
+
+[ext_resource type="PackedScene" uid="uid://b5wdufkoygmu4" path="res://Wall.tscn" id="1_oq46b"]
+[ext_resource type="PackedScene" uid="uid://b8q53308u3nor" path="res://Character.tscn" id="2_glsei"]
+
+[node name="Main" type="Node"]
+
+[node name="WallContainer" type="Node" parent="."]
+
+[node name="Wall" parent="WallContainer" instance=ExtResource("1_oq46b")]
+position = Vector2(52, 342)
+rotation = 1.56971
+
+[node name="Wall2" parent="WallContainer" instance=ExtResource("1_oq46b")]
+position = Vector2(56, 593)
+
+[node name="Wall3" parent="WallContainer" instance=ExtResource("1_oq46b")]
+position = Vector2(363, 593)
+
+[node name="Wall4" parent="WallContainer" instance=ExtResource("1_oq46b")]
+position = Vector2(671, 593)
+
+[node name="Wall5" parent="WallContainer" instance=ExtResource("1_oq46b")]
+position = Vector2(1035, 344)
+rotation = 1.5708
+
+[node name="Character" parent="." instance=ExtResource("2_glsei")]
+position = Vector2(529, 321)
