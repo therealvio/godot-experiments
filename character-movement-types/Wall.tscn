@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5wdufkoygmu4"]
+
+[ext_resource type="Texture2D" uid="uid://b1i7ue1dpipm0" path="res://assets/Bouncy Platform Long.png" id="1_kelk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_df3u8"]
+size = Vector2(305, 58)
+
+[node name="Wall" type="StaticBody2D"]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(153, 27)
+texture = ExtResource("1_kelk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(153.5, 27)
+shape = SubResource("RectangleShape2D_df3u8")
