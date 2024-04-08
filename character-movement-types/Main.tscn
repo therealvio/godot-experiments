@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://8qi67001pi6n"]
 
 [ext_resource type="PackedScene" uid="uid://b5wdufkoygmu4" path="res://Wall.tscn" id="1_oq46b"]
-[ext_resource type="PackedScene" uid="uid://bhkfflstsckhv" path="res://AccelerationCharacter.tscn" id="2_0fjhw"]
-[ext_resource type="PackedScene" uid="uid://b8q53308u3nor" path="res://ImpulseCharacter.tscn" id="2_glsei"]
+[ext_resource type="PackedScene" uid="uid://j2ipd8amy3p3" path="res://ImpulseCharacter.tscn" id="4_i0sxr"]
+[ext_resource type="PackedScene" uid="uid://de6bmkv0aequx" path="res://AccelerationCharacter.tscn" id="5_k5d40"]
 
 [node name="Main" type="Node"]
 
@@ -25,8 +25,10 @@ position = Vector2(671, 593)
 position = Vector2(1035, 344)
 rotation = 1.5708
 
-[node name="ImpulseCharacter" parent="." instance=ExtResource("2_glsei")]
-position = Vector2(297, 460)
+[node name="AccelerationCharacter" parent="." instance=ExtResource("5_k5d40")]
+position = Vector2(277, 492)
+collision_layer = 16
 
-[node name="AccelerationCharacter" parent="." instance=ExtResource("2_0fjhw")]
-position = Vector2(449, 462)
+[node name="ImpulseCharacter" parent="." instance=ExtResource("4_i0sxr")]
+position = Vector2(113, 492)
+collision_layer = 8

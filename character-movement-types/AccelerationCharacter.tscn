@@ -1,21 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhkfflstsckhv"]
+[gd_scene load_steps=5 format=3 uid="uid://de6bmkv0aequx"]
 
-[ext_resource type="Script" path="res://scripts/AccelerationCharacter.gd" id="1_obe6e"]
-[ext_resource type="Texture2D" uid="uid://do6x6fw2345ts" path="res://assets/icon.svg" id="2_5rnfl"]
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_ut7ea"]
+[ext_resource type="Texture2D" uid="uid://do6x6fw2345ts" path="res://assets/icon.svg" id="2_w8dt1"]
+[ext_resource type="Script" path="res://scripts/acceleration_movement.gd" id="3_wdtt8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4tbc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onmuw"]
 size = Vector2(64, 64)
 
-[node name="AccelerationCharacter" type="CharacterBody2D"]
-collision_layer = 4
-script = ExtResource("1_obe6e")
+[node name="AccelerationCharacterV2" type="CharacterBody2D" node_paths=PackedStringArray("label_component", "movement")]
+script = ExtResource("1_ut7ea")
+movement_type = 1
+label_component = NodePath("Label")
+movement = NodePath("AccelerationMovementComponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_5rnfl")
+texture = ExtResource("2_w8dt1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_i4tbc")
+shape = SubResource("RectangleShape2D_onmuw")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -32.0
@@ -23,3 +26,9 @@ offset_top = -69.0
 offset_right = 60.0
 offset_bottom = -46.0
 text = "placeholder"
+
+[node name="AccelerationMovementComponent" type="Node2D" parent="."]
+script = ExtResource("3_wdtt8")
+acceleration = null
+max_speed = null
+friction = null
