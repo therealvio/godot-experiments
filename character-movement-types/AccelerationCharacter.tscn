@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://de6bmkv0aequx"]
 
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_ut7ea"]
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_tr50f"]
 [ext_resource type="Texture2D" uid="uid://do6x6fw2345ts" path="res://assets/icon.svg" id="2_w8dt1"]
 [ext_resource type="Script" path="res://scripts/acceleration_movement.gd" id="3_wdtt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onmuw"]
 size = Vector2(64, 64)
 
-[node name="AccelerationCharacterV2" type="CharacterBody2D" node_paths=PackedStringArray("label_component", "movement")]
-script = ExtResource("1_ut7ea")
+[node name="AccelerationCharacter" type="CharacterBody2D" node_paths=PackedStringArray("label_component", "movement")]
+script = ExtResource("1_tr50f")
 movement_type = 1
 label_component = NodePath("Label")
 movement = NodePath("AccelerationMovementComponent")
@@ -27,8 +27,5 @@ offset_right = 60.0
 offset_bottom = -46.0
 text = "placeholder"
 
-[node name="AccelerationMovementComponent" type="Node2D" parent="."]
+[node name="AccelerationMovementComponent" type="Node" parent="."]
 script = ExtResource("3_wdtt8")
-acceleration = null
-max_speed = null
-friction = null
